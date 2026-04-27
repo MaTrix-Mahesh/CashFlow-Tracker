@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CashFlow Tracker</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <div class="app-container">
+        <header>
+            <div class="user-info">
+                <h1>CashFlow Tracker</h1>
+                <p>Track your cash flow effortlessly</p>
+            </div>
+        </header>
+
+        <div class="stats-grid">
+            <div class="stat-card blue">
+                <span class="label">Total Salary</span>
+                <h2 id="display-salary">₹0</h2>
+            </div>
+            <div class="stat-card orange">
+                <span class="label">Total Expenses</span>
+                <h2 id="display-expenses">₹0</h2>
+            </div>
+            <div class="stat-card green" id="balance-card">
+                <span class="label">Remaining Balance</span>
+                <h2 id="display-balance">₹0</h2>
+            </div>
+        </div>
+
+        <main class="content-layout">
+            <section class="card action-pane">
+                <div class="input-group">
+                    <h3>Set Income</h3>
+                    <input type="number" id="salary-input" placeholder="Enter salary amount">
+                    <button id="set-salary-btn" class="btn-primary">Update Salary</button>
+                </div>
+
+                <div class="input-group divider">
+                    <h3>New Transaction</h3>
+                    <input type="text" id="expense-name" placeholder="What did you spend on?">
+                    <input type="number" id="expense-amount" placeholder="Amount">
+                    <button id="add-expense-btn" class="btn-success">Add Expense</button>
+                </div>
+            </section>
+
+            <section class="card list-pane">
+                <h3>Recent Transactions</h3>
+                <div class="scroll-area">
+                    <ul id="expense-list">
+                        </ul>
+                </div>
+            </section>
+        </main>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
