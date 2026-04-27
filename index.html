@@ -1,20 +1,23 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="light">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CashFlow Tracker</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <div class="app-container">
         <header>
-            <div class="user-info">
+            <div class="brand">
                 <h1>CashFlow Tracker</h1>
-                <p>Track your cash flow effortlessly</p>
+                <p>Track your cash flow with ease</p>
             </div>
+            <button id="theme-toggle" class="theme-btn">
+                <span id="theme-icon">🌙</span>
+            </button>
         </header>
 
         <div class="stats-grid">
@@ -32,23 +35,27 @@
             </div>
         </div>
 
-        <main class="content-layout">
-            <section class="card action-pane">
-                <div class="input-group">
-                    <h3>Set Income</h3>
-                    <input type="number" id="salary-input" placeholder="Enter salary amount">
-                    <button id="set-salary-btn" class="btn-primary">Update Salary</button>
+        <main class="main-layout">
+            <aside class="card pane">
+                <div class="form-group">
+                    <h3>Monthly Income</h3>
+                    <div class="input-wrapper">
+                        <input type="number" id="salary-input" placeholder="e.g. 50000">
+                        <button id="set-salary-btn">Set Salary</button>
+                    </div>
                 </div>
 
-                <div class="input-group divider">
-                    <h3>New Transaction</h3>
-                    <input type="text" id="expense-name" placeholder="What did you spend on?">
-                    <input type="number" id="expense-amount" placeholder="Amount">
+                <div class="form-group divider">
+                    <h3>Add Transaction</h3>
+                    <label>Expense Name</label>
+                    <input type="text" id="expense-name" placeholder="Rent, Food, etc.">
+                    <label>Amount</label>
+                    <input type="number" id="expense-amount" placeholder="₹ Amount">
                     <button id="add-expense-btn" class="btn-success">Add Expense</button>
                 </div>
-            </section>
+            </aside>
 
-            <section class="card list-pane">
+            <section class="card pane">
                 <h3>Recent Transactions</h3>
                 <div class="scroll-area">
                     <ul id="expense-list">
